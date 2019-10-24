@@ -20,4 +20,10 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     @RestResource (path="/productsByKeyword")       //renvoi la liste des produits contenant le mot clé stocké dans "mc"
     public List<Product> findByNameContains(@Param("mc") String mc);
     //http://localhost:8080/products/search/productsByKeyword?mc=x
+
+    @RestResource (path="/promoProducts")
+    public List<Product> findByPromotionIsTrue();
+
+    @RestResource (path="/dispoProducts")
+    public List<Product> findByAvailableIsTrue();
 }

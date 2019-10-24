@@ -32,9 +32,11 @@ public class EcomV2Application implements CommandLineRunner {
 	    repositoryRestConfiguration.exposeIdsFor(Product.class,Category.class);
 	    //Demande à spring d'exposer l'id des classes ci dessus
 
-	    categoryRepository.save(new Category(null,"computers",null,null,null));
+/*	    categoryRepository.save(new Category(null,"computers",null,null,null));
         categoryRepository.save(new Category(null,"printers",null,null,null));
         categoryRepository.save(new Category(null,"smart phones",null,null,null));
+
+
 
         Random random = new Random();
 
@@ -50,6 +52,6 @@ public class EcomV2Application implements CommandLineRunner {
                 product.setPhotoName("unknown.png");
                 productRepository.save(product);
             }
-        });
+        });*/
     }
 }

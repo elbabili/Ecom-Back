@@ -23,6 +23,9 @@ public class Product implements Serializable {
     private boolean available;      //dispo en stock
     private String photoName;
 
+    @Transient
+    private int quantity=1;
+
     @ManyToOne
     private Category category;
 }
